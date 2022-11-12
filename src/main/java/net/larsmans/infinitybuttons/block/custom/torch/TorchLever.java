@@ -25,11 +25,11 @@ public class TorchLever extends TorchButton {
         if (state.get(PRESSED)) {
             this.powerOff(state, world, pos);
             this.playClickSound(player, world, pos, false);
-            world.emitGameEvent((Entity) player, GameEvent.BLOCK_DEACTIVATE, pos);
+            world.emitGameEvent((Entity) player, GameEvent.BLOCK_UNPRESS, pos);
         } else {
             this.powerOn(state, world, pos);
             this.playClickSound(player, world, pos, true);
-            world.emitGameEvent((Entity) player, GameEvent.BLOCK_ACTIVATE, pos);
+            world.emitGameEvent((Entity) player, GameEvent.BLOCK_PRESS, pos);
         }
         return ActionResult.success(world.isClient);
     }

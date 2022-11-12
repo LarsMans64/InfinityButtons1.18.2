@@ -1,7 +1,8 @@
 package net.larsmans.infinitybuttons.block.custom.emergencybutton;
 
+import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.larsmans.infinitybuttons.InfinityButtonsInit;
+import net.larsmans.infinitybuttons.InfinityButtonsConfig;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -20,7 +21,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
@@ -29,8 +29,14 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Random;
+
+;
+
 
 public class EmergencyButton extends WallMountedBlock {
+    InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
+
     public static final BooleanProperty PRESSED = BooleanProperty.of("pressed");
 
     private static final VoxelShape STONE_DOWN  = Block.createCuboidShape(4, 0, 4, 12, 1, 12);
@@ -123,10 +129,10 @@ public class EmergencyButton extends WallMountedBlock {
         }
         this.powerOn(state, world, pos);
         this.playClickSound(player, world, pos, true);
-        if (InfinityButtonsInit.CONFIG.alarmSound()) {
+        if (config.alarmSound) {
             world.playSound(player, pos, InfinityButtonsSounds.ALARM, SoundCategory.BLOCKS, 2f, 0.6f);
         }
-        world.emitGameEvent((Entity)player, GameEvent.BLOCK_ACTIVATE, pos);
+        world.emitGameEvent((Entity)player, GameEvent.BLOCK_PRESS, pos);
         return ActionResult.success(world.isClient);
     }
 
@@ -176,7 +182,7 @@ public class EmergencyButton extends WallMountedBlock {
             world.setBlockState(pos, (BlockState)state.with(PRESSED, false), Block.NOTIFY_ALL);
             this.updateNeighbors(state, world, pos);
             this.playClickSound(null, world, pos, false);
-            world.emitGameEvent(null, GameEvent.BLOCK_DEACTIVATE, pos);
+            world.emitGameEvent(null, GameEvent.BLOCK_UNPRESS, pos);
         }
     }
 

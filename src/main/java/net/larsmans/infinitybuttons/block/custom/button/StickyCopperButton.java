@@ -1,7 +1,8 @@
 package net.larsmans.infinitybuttons.block.custom.button;
 
+import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.larsmans.infinitybuttons.InfinityButtonsInit;
+import net.larsmans.infinitybuttons.InfinityButtonsConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
@@ -13,6 +14,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
@@ -27,6 +29,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class StickyCopperButton extends AbstractButton {
+    InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
 
     public StickyCopperButton(FabricBlockSettings settings) {
         super(false, settings);
@@ -43,11 +46,11 @@ public class StickyCopperButton extends AbstractButton {
         if (state.get(PRESSED)) {
             this.powerOff(state, world, pos);
             this.playClickSound(player, world, pos, false);
-            world.emitGameEvent((Entity)player, GameEvent.BLOCK_DEACTIVATE, pos);
+            world.emitGameEvent((Entity)player, GameEvent.BLOCK_UNPRESS, pos);
         } else {
             this.powerOn(state, world, pos);
             this.playClickSound(player, world, pos, true);
-            world.emitGameEvent((Entity)player, GameEvent.BLOCK_ACTIVATE, pos);
+            world.emitGameEvent((Entity)player, GameEvent.BLOCK_PRESS, pos);
         }
         return ActionResult.success(world.isClient);
     }
@@ -75,11 +78,11 @@ public class StickyCopperButton extends AbstractButton {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        if (InfinityButtonsInit.CONFIG.tooltips()) {
+        if (config.tooltips) {
             if (Screen.hasShiftDown()) {
-                tooltip.add(Text.translatable("infinitybuttons.tooltip.sticky_copper_button").formatted(Formatting.GRAY));
+                tooltip.add(new TranslatableText("infinitybuttons.tooltip.sticky_copper_button").formatted(Formatting.GRAY));
             } else {
-                tooltip.add(Text.translatable("infinitybuttons.tooltip.hold_shift").formatted(Formatting.GRAY));
+                tooltip.add(new TranslatableText("infinitybuttons.tooltip.hold_shift").formatted(Formatting.GRAY));
             }
         }
     }

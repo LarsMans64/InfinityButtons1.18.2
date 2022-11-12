@@ -14,17 +14,17 @@ public class InfinityButtonsItems {
      * Torches
      */
 
-    public static final Item TORCH_BUTTON = InfinityButtonsItems.registerItem("torch_button", new WallStandingBlockItem(InfinityButtonsBlocks.TORCH_BUTTON, InfinityButtonsBlocks.WALL_TORCH_BUTTON, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+    public static final Item TORCH_BUTTON = registerItem("torch_button", new WallStandingBlockItem(InfinityButtonsBlocks.TORCH_BUTTON, InfinityButtonsBlocks.WALL_TORCH_BUTTON, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
 
-    public static final Item TORCH_LEVER = InfinityButtonsItems.registerItem("torch_lever", new WallStandingBlockItem(InfinityButtonsBlocks.TORCH_LEVER, InfinityButtonsBlocks.WALL_TORCH_LEVER, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+    public static final Item TORCH_LEVER = registerItem("torch_lever", new WallStandingBlockItem(InfinityButtonsBlocks.TORCH_LEVER, InfinityButtonsBlocks.WALL_TORCH_LEVER, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
 
-    public static final Item SOUL_TORCH_BUTTON = InfinityButtonsItems.registerItem("soul_torch_button", new WallStandingBlockItem(InfinityButtonsBlocks.SOUL_TORCH_BUTTON, InfinityButtonsBlocks.SOUL_WALL_TORCH_BUTTON, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+    public static final Item SOUL_TORCH_BUTTON = registerItem("soul_torch_button", new WallStandingBlockItem(InfinityButtonsBlocks.SOUL_TORCH_BUTTON, InfinityButtonsBlocks.SOUL_WALL_TORCH_BUTTON, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
 
-    public static final Item SOUL_TORCH_LEVER = InfinityButtonsItems.registerItem("soul_torch_lever", new WallStandingBlockItem(InfinityButtonsBlocks.SOUL_TORCH_LEVER, InfinityButtonsBlocks.SOUL_WALL_TORCH_LEVER, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+    public static final Item SOUL_TORCH_LEVER = registerItem("soul_torch_lever", new WallStandingBlockItem(InfinityButtonsBlocks.SOUL_TORCH_LEVER, InfinityButtonsBlocks.SOUL_WALL_TORCH_LEVER, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
 
-    public static final Item REDSTONE_TORCH_BUTTON = InfinityButtonsItems.registerItem("redstone_torch_button", new WallStandingBlockItem(InfinityButtonsBlocks.REDSTONE_TORCH_BUTTON, InfinityButtonsBlocks.REDSTONE_WALL_TORCH_BUTTON, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+    public static final Item REDSTONE_TORCH_BUTTON = registerItem("redstone_torch_button", new WallStandingBlockItem(InfinityButtonsBlocks.REDSTONE_TORCH_BUTTON, InfinityButtonsBlocks.REDSTONE_WALL_TORCH_BUTTON, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
 
-    public static final Item REDSTONE_TORCH_LEVER = InfinityButtonsItems.registerItem("redstone_torch_lever", new WallStandingBlockItem(InfinityButtonsBlocks.REDSTONE_TORCH_LEVER, InfinityButtonsBlocks.REDSTONE_WALL_TORCH_LEVER, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+    public static final Item REDSTONE_TORCH_LEVER = registerItem("redstone_torch_lever", new WallStandingBlockItem(InfinityButtonsBlocks.REDSTONE_TORCH_LEVER, InfinityButtonsBlocks.REDSTONE_WALL_TORCH_LEVER, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
 
     /**
      * Methods

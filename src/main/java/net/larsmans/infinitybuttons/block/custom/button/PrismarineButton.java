@@ -3,8 +3,9 @@
  */
 package net.larsmans.infinitybuttons.block.custom.button;
 
+import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.larsmans.infinitybuttons.InfinityButtonsInit;
+import net.larsmans.infinitybuttons.InfinityButtonsConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -22,6 +23,7 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -32,6 +34,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class PrismarineButton extends AbstractButton {
+    InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
 
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
@@ -89,11 +92,11 @@ public class PrismarineButton extends AbstractButton {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        if (InfinityButtonsInit.CONFIG.tooltips()) {
+        if (config.tooltips) {
             if (Screen.hasShiftDown()) {
-                tooltip.add(Text.translatable("infinitybuttons.tooltip.prismarine_button").formatted(Formatting.GRAY));
+                tooltip.add(new TranslatableText("infinitybuttons.tooltip.prismarine_button").formatted(Formatting.GRAY));
             } else {
-                tooltip.add(Text.translatable("infinitybuttons.tooltip.hold_shift").formatted(Formatting.GRAY));
+                tooltip.add(new TranslatableText("infinitybuttons.tooltip.hold_shift").formatted(Formatting.GRAY));
             }
         }
     }

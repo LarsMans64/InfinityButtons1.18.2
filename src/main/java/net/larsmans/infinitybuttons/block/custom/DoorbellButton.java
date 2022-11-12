@@ -1,11 +1,13 @@
 package net.larsmans.infinitybuttons.block.custom;
 
-import net.larsmans.infinitybuttons.InfinityButtonsInit;
+import me.shedaniel.autoconfig.AutoConfig;
+import net.larsmans.infinitybuttons.InfinityButtonsConfig;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -15,6 +17,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class DoorbellButton extends Doorbell{
+    InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
 
     public DoorbellButton (Settings settings) {
         super(settings);
@@ -41,11 +44,11 @@ public class DoorbellButton extends Doorbell{
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        if (InfinityButtonsInit.CONFIG.tooltips()) {
+        if (config.tooltips) {
             if (Screen.hasShiftDown()) {
-                tooltip.add(Text.translatable("infinitybuttons.tooltip.doorbell_button").formatted(Formatting.GRAY));
+                tooltip.add(new TranslatableText("infinitybuttons.tooltip.doorbell_button").formatted(Formatting.GRAY));
             } else {
-                tooltip.add(Text.translatable("infinitybuttons.tooltip.hold_shift").formatted(Formatting.GRAY));
+                tooltip.add(new TranslatableText("infinitybuttons.tooltip.hold_shift").formatted(Formatting.GRAY));
             }
         }
     }

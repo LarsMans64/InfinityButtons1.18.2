@@ -1,7 +1,8 @@
 package net.larsmans.infinitybuttons.block.custom.button;
 
+import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.larsmans.infinitybuttons.InfinityButtonsInit;
+import net.larsmans.infinitybuttons.InfinityButtonsConfig;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
@@ -10,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
@@ -22,6 +24,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class ArrowButton extends AbstractButton {
+    
+    InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
     public ArrowButton(FabricBlockSettings settings) {
         super(true, settings);
     }
@@ -43,11 +47,11 @@ public class ArrowButton extends AbstractButton {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        if (InfinityButtonsInit.CONFIG.tooltips()) {
+        if (config.tooltips) {
             if (Screen.hasShiftDown()) {
-                tooltip.add(Text.translatable("infinitybuttons.tooltip.arrow_button").formatted(Formatting.GRAY));
+                tooltip.add(new TranslatableText("infinitybuttons.tooltip.arrow_button").formatted(Formatting.GRAY));
             } else {
-                tooltip.add(Text.translatable("infinitybuttons.tooltip.hold_shift").formatted(Formatting.GRAY));
+                tooltip.add(new TranslatableText("infinitybuttons.tooltip.hold_shift").formatted(Formatting.GRAY));
             }
         }
     }

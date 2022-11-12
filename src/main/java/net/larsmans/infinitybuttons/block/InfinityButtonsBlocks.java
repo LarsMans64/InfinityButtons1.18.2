@@ -106,9 +106,6 @@ public class InfinityButtonsBlocks {
     public static final Block JUNGLE_LARGE_BUTTON = registerBlock("jungle_large_button",
             new WoodenLargeButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).collidable(false).nonOpaque().sounds(BlockSoundGroup.WOOD)), InfinityButtonsItemGroup.INFINITYBUTTONS);
 
-    public static final Block MANGROVE_LARGE_BUTTON = registerBlock("mangrove_large_button",
-            new WoodenLargeButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).collidable(false).nonOpaque().sounds(BlockSoundGroup.WOOD)), InfinityButtonsItemGroup.INFINITYBUTTONS);
-
     public static final Block WARPED_LARGE_BUTTON = registerBlock("warped_large_button",
             new WoodenLargeButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).collidable(false).nonOpaque().sounds(BlockSoundGroup.WOOD)), InfinityButtonsItemGroup.INFINITYBUTTONS);
 
@@ -300,9 +297,6 @@ public class InfinityButtonsBlocks {
     public static final Block CHISELED_STONE_BRICK_SECRET_BUTTON = registerBlock("chiseled_stone_brick_secret_button",
             new ChiseledStoneBrickSecretButton(FabricBlockSettings.of(Material.STONE).nonOpaque().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5f, 6.0f)), InfinityButtonsItemGroup.INFINITYBUTTONS);
 
-    public static final Block MUD_BRICK_SECRET_BUTTON = registerBlock("mud_brick_secret_button",
-            new MudBrickSecretButton(FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_LIGHT_GRAY).nonOpaque().sounds(BlockSoundGroup.MUD_BRICKS).requiresTool().strength(1.5f, 3.0f)), InfinityButtonsItemGroup.INFINITYBUTTONS);
-
     public static final Block DEEPSLATE_BRICK_SECRET_BUTTON = registerBlock("deepslate_brick_secret_button",
             new BigBrickSecretButton(FabricBlockSettings.of(Material.STONE, MapColor.DEEPSLATE_GRAY).nonOpaque().sounds(BlockSoundGroup.DEEPSLATE_BRICKS).requiresTool().strength(3.5f, 6.0f)), InfinityButtonsItemGroup.INFINITYBUTTONS);
 
@@ -365,9 +359,6 @@ public class InfinityButtonsBlocks {
 
     public static final Block JUNGLE_PLANK_SECRET_BUTTON = registerBlock("jungle_plank_secret_button",
             new PlankSecretButton(FabricBlockSettings.of(Material.WOOD, MapColor.DIRT_BROWN).nonOpaque().sounds(BlockSoundGroup.WOOD).strength(2.0f, 3.0f)), InfinityButtonsItemGroup.INFINITYBUTTONS);
-
-    public static final Block MANGROVE_PLANK_SECRET_BUTTON = registerBlock("mangrove_plank_secret_button",
-            new PlankSecretButton(FabricBlockSettings.of(Material.WOOD, MapColor.RED).nonOpaque().sounds(BlockSoundGroup.WOOD).strength(2.0f, 3.0f)), InfinityButtonsItemGroup.INFINITYBUTTONS);
 
     public static final Block CRIMSON_PLANK_SECRET_BUTTON = registerBlock("crimson_plank_secret_button",
             new PlankSecretButton(FabricBlockSettings.of(Material.NETHER_WOOD, MapColor.DULL_PINK).nonOpaque().sounds(BlockSoundGroup.WOOD).strength(2.0f, 3.0f)), InfinityButtonsItemGroup.INFINITYBUTTONS);

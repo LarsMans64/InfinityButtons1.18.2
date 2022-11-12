@@ -24,7 +24,6 @@
     "block.infinitybuttons.spruce_large_button": "Sparrenhouten grote knop",
     "block.infinitybuttons.dark_oak_large_button": "Donkereikenhouten grote knop",
     "block.infinitybuttons.jungle_large_button": "Oerwoudhouten grote knop",
-    "block.infinitybuttons.mangrove_large_button": "Mangrovehouten grote knop",
     "block.infinitybuttons.warped_large_button": "Spookachtige houten grote knop",
     "block.infinitybuttons.crimson_large_button": "Helrode houten grote knop",
     "block.infinitybuttons.stone_large_button": "Stenen grote knop",
@@ -89,7 +88,6 @@
     "block.infinitybuttons.mossy_stone_brick_secret_button": "Mossig blokstenen verborgen knop",
     "block.infinitybuttons.cracked_stone_brick_secret_button": "Gebarsten blokstenen verborgen knop",
     "block.infinitybuttons.chiseled_stone_brick_secret_button": "Gebeiteld blokstenen verborgen knop",
-    "block.infinitybuttons.mud_brick_secret_button": "Modderstenen verborgen knop",
     "block.infinitybuttons.deepslate_brick_secret_button": "Wrevelblokstenen verborgen knop",
     "block.infinitybuttons.cracked_deepslate_brick_secret_button": "Gebarsten wrevelstenen verborgen knop",
     "block.infinitybuttons.deepslate_tile_secret_button": "Wrevelstenen tegel verborgen knop",
@@ -111,7 +109,6 @@
     "block.infinitybuttons.acacia_plank_secret_button": "Acaciahouten planken verborgen knop",
     "block.infinitybuttons.dark_oak_plank_secret_button": "Donkereikhouten planken verborgen knop",
     "block.infinitybuttons.jungle_plank_secret_button": "Ourwoudhouten planken verborgen knop",
-    "block.infinitybuttons.mangrove_plank_secret_button": "Mangrovehouten planken verborgen knop",
     "block.infinitybuttons.crimson_plank_secret_button": "Helrode houten planken verborgen knop",
     "block.infinitybuttons.warped_plank_secret_button": "Spookachtige houten planken verborgen knop",
 
@@ -143,11 +140,11 @@
 
     "itemGroup.infinitybuttons.infinitybuttons": "Infinity Buttons",
 
-    "text.config.infinity-buttons-config.option.alarmSound": "Alarmgeluid",
-    "text.config.infinity-buttons-config.option.alarmSound.tooltip": "Of de veilige noodknoppen een alarmgeluid maken",
-    "text.config.infinity-buttons-config.option.tooltips": "Tooltips",
-    "text.config.infinity-buttons-config.option.tooltips.tooltip": "Of tooltips worden weergegeven",
-    "text.config.infinity-buttons-config.option.diamondParticles": "Diamanten-knopdeeltjes",
-    "text.config.infinity-buttons-config.option.diamondParticles.tooltip": "Of er deeltjes om diamanten knoppen komen",
-    "text.config.infinity-buttons-config.title": "Infinity Buttons Configuratie"
+    "text.autoconfig.infinitybuttons.option.alarmSound": "Alarmgeluid",
+    "text.autoconfig.infinitybuttons.option.alarmSound.@Tooltip": "Of de noodknoppen een alarmgeluid maken",
+    "text.autoconfig.infinitybuttons.option.tooltips": "Tooltips",
+    "text.autoconfig.infinitybuttons.option.tooltips.@Tooltip": "Of tooltips worden weergegeven",
+    "text.autoconfig.infinitybuttons.option.diamondParticles": "Diamanten-knopdeeltjes",
+    "text.autoconfig.infinitybuttons.option.diamondParticles.@Tooltip": "Of de diamanten knoppen deeltjes zullen hebben",
+    "text.autoconfig.infinitybuttons.title": "Infinity Buttons Configuratie"
 }
