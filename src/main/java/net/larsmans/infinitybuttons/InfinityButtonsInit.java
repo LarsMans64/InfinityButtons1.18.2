@@ -3,7 +3,10 @@ package net.larsmans.infinitybuttons;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.loader.api.FabricLoader;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
+import net.larsmans.infinitybuttons.compatregistries.NethersDelightBlocks;
+import net.larsmans.infinitybuttons.compatregistries.NethersDelightItems;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import org.slf4j.Logger;
@@ -18,8 +21,14 @@ public class InfinityButtonsInit implements ModInitializer {
 	public void onInitialize() {
 		AutoConfig.register(InfinityButtonsConfig.class, Toml4jConfigSerializer::new);
 		config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
+
 		InfinityButtonsItems.registerModItems();
 		InfinityButtonsBlocks.registerModBlocks();
 		InfinityButtonsSounds.registerSounds();
+
+		if (FabricLoader.getInstance().isModLoaded("nethersdelight")) {
+			NethersDelightItems.registerCompatItems();
+			NethersDelightBlocks.registerCompatBlocks();
+		}
 	}
 }

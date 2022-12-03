@@ -1,0 +1,24 @@
+package net.larsmans.infinitybuttons.compatregistries;
+
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.larsmans.infinitybuttons.InfinityButtonsInit;
+import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroup;
+import net.minecraft.item.Item;
+import net.minecraft.item.WallStandingBlockItem;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
+
+public class NethersDelightItems {
+
+    public static final Item PROPELPLANT_TORCH_BUTTON = registerItem("propelplant_torch_button", new WallStandingBlockItem(NethersDelightBlocks.PROPELPLANT_TORCH_BUTTON, NethersDelightBlocks.PROPELPLANT_WALL_TORCH_BUTTON, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+
+    public static final Item PROPELPLANT_TORCH_LEVER = registerItem("propelplant_torch_lever", new WallStandingBlockItem(NethersDelightBlocks.PROPELPLANT_TORCH_LEVER, NethersDelightBlocks.PROPELPLANT_WALL_TORCH_LEVER, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+
+    private static Item registerItem(String name, Item item) {
+        return Registry.register(Registry.ITEM, new Identifier(InfinityButtonsInit.MOD_ID, name), item);
+    }
+
+    public static void registerCompatItems() {
+        InfinityButtonsInit.LOGGER.debug("Registering Compat Items for Infinity Buttons");
+    }
+}
