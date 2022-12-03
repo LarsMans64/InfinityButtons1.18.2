@@ -1,8 +1,7 @@
 package net.larsmans.infinitybuttons.block.custom.largebutton;
 
-import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.larsmans.infinitybuttons.InfinityButtonsConfig;
+import net.larsmans.infinitybuttons.InfinityButtonsInit;
 import net.larsmans.infinitybuttons.block.custom.button.DiamondButton;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
@@ -15,7 +14,6 @@ import net.minecraft.world.World;
 import java.util.Random;
 
 public class DiamondLargeButton extends DiamondButton {
-    InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
 
     public DiamondLargeButton(FabricBlockSettings settings) {
         super(settings);
@@ -28,7 +26,7 @@ public class DiamondLargeButton extends DiamondButton {
 
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (config.diamondParticles) {
+        if (InfinityButtonsInit.config.diamondParticles) {
             if (random.nextInt(3) == 0) {
                 switch (state.get(FACE)) {
                     case FLOOR -> world.addParticle(ParticleTypes.SCRAPE,

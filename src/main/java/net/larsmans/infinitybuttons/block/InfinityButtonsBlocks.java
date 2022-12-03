@@ -2,9 +2,11 @@ package net.larsmans.infinitybuttons.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.loader.api.FabricLoader;
 import net.larsmans.infinitybuttons.InfinityButtonsInit;
 import net.larsmans.infinitybuttons.block.custom.Doorbell;
 import net.larsmans.infinitybuttons.block.custom.DoorbellButton;
+import net.larsmans.infinitybuttons.block.custom.HoglinMountButton;
 import net.larsmans.infinitybuttons.block.custom.button.*;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.EmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyButton;
@@ -23,6 +25,7 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import org.jetbrains.annotations.Nullable;
 
 
 public class InfinityButtonsBlocks {
@@ -503,6 +506,9 @@ public class InfinityButtonsBlocks {
     public static final Block DOORBELL_BUTTON = registerBlock("doorbell_button",
             new DoorbellButton(FabricBlockSettings.of(Material.DECORATION).nonOpaque().noCollision().strength(0.5f).sounds(BlockSoundGroup.WOOD)), InfinityButtonsItemGroup.INFINITYBUTTONS);
 
+    public static final Block HOGLIN_MOUNT_BUTTON = registerCompatBlock("nethersdelight", "hoglin_mount_button",
+            new HoglinMountButton(FabricBlockSettings.of(Material.WOOL, MapColor.BROWN).strength(0.8f).sounds(BlockSoundGroup.WOOL)), InfinityButtonsItemGroup.INFINITYBUTTONS);
+
     /**
      * Torches
      */
@@ -550,6 +556,14 @@ public class InfinityButtonsBlocks {
     private static Block registerBlock(String name, Block block, ItemGroup tab) {
         registerBlockItem(name, block, tab);
         return Registry.register(Registry.BLOCK, new Identifier(InfinityButtonsInit.MOD_ID, name), block);
+    }
+
+    private static @Nullable Block registerCompatBlock(String modid, String name, Block block, ItemGroup tab) {
+        if (FabricLoader.getInstance().isModLoaded(modid)) {
+            registerBlockItem(name, block, tab);
+            return Registry.register(Registry.BLOCK, new Identifier(InfinityButtonsInit.MOD_ID, name), block);
+        }
+        return null;
     }
 
     private static Block registerBlock(String name, Block block) {

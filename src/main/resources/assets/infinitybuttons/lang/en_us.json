@@ -156,6 +156,7 @@
 
     "block.infinitybuttons.doorbell": "Doorbell",
     "block.infinitybuttons.doorbell_button": "Doorbell Button",
+    "block.infinitybuttons.hoglin_mount_button": "Hoglin Mount Button",
 
     "block.infinitybuttons.torch_button": "Torch Button",
     "block.infinitybuttons.torch_lever": "Torch Lever",

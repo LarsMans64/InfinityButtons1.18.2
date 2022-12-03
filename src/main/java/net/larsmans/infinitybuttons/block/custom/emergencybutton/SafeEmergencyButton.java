@@ -1,8 +1,7 @@
 package net.larsmans.infinitybuttons.block.custom.emergencybutton;
 
-import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.larsmans.infinitybuttons.InfinityButtonsConfig;
+import net.larsmans.infinitybuttons.InfinityButtonsInit;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -39,7 +38,6 @@ import java.util.List;
 import java.util.Random;
 
 public class SafeEmergencyButton extends WallMountedBlock {
-    InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
 
     public static final EnumProperty<SEBStateEnum> STATE = EnumProperty.of("state", SEBStateEnum.class);
 
@@ -201,7 +199,7 @@ public class SafeEmergencyButton extends WallMountedBlock {
                 } else {
                     this.powerOn(state, world, pos);
                     this.playClickSound(player, world, pos, true);
-                    if (config.alarmSound) {
+                    if (InfinityButtonsInit.config.alarmSound) {
                         world.playSound(player, pos, InfinityButtonsSounds.ALARM, SoundCategory.BLOCKS, 2f, 0.6f);
                     }
                     world.emitGameEvent((Entity) player, GameEvent.BLOCK_PRESS, pos);
@@ -291,7 +289,7 @@ public class SafeEmergencyButton extends WallMountedBlock {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        if (config.tooltips) {
+        if (InfinityButtonsInit.config.tooltips) {
             if (Screen.hasShiftDown()) {
                 tooltip.add(new TranslatableText("infinitybuttons.tooltip.safe_emergency_button").formatted(Formatting.GRAY));
             } else {

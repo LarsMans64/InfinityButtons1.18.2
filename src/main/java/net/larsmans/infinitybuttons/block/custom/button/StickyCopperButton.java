@@ -1,8 +1,7 @@
 package net.larsmans.infinitybuttons.block.custom.button;
 
-import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.larsmans.infinitybuttons.InfinityButtonsConfig;
+import net.larsmans.infinitybuttons.InfinityButtonsInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
@@ -29,7 +28,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class StickyCopperButton extends AbstractButton {
-    InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
 
     public StickyCopperButton(FabricBlockSettings settings) {
         super(false, settings);
@@ -78,7 +76,7 @@ public class StickyCopperButton extends AbstractButton {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        if (config.tooltips) {
+        if (InfinityButtonsInit.config.tooltips) {
             if (Screen.hasShiftDown()) {
                 tooltip.add(new TranslatableText("infinitybuttons.tooltip.sticky_copper_button").formatted(Formatting.GRAY));
             } else {

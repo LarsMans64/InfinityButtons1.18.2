@@ -1,8 +1,7 @@
 package net.larsmans.infinitybuttons.block.custom.button;
 
-import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.larsmans.infinitybuttons.InfinityButtonsConfig;
+import net.larsmans.infinitybuttons.InfinityButtonsInit;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
@@ -17,7 +16,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class EmeraldButton extends AbstractButton {
-    InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
 
     public EmeraldButton(FabricBlockSettings settings) {
         super(false, settings);
@@ -35,7 +33,7 @@ public class EmeraldButton extends AbstractButton {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        if (config.tooltips) {
+        if (InfinityButtonsInit.config.tooltips) {
             if (Screen.hasShiftDown()) {
                 tooltip.add(new TranslatableText("infinitybuttons.tooltip.emerald_button1").formatted(Formatting.GRAY));
                 tooltip.add(new TranslatableText("infinitybuttons.tooltip.emerald_button2").formatted(Formatting.GRAY));
