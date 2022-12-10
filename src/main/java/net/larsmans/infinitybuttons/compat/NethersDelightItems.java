@@ -1,4 +1,4 @@
-package net.larsmans.infinitybuttons.compatregistries;
+package net.larsmans.infinitybuttons.compat;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.larsmans.infinitybuttons.InfinityButtonsInit;
