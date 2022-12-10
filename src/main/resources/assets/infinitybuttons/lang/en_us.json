@@ -154,6 +154,14 @@
     "block.infinitybuttons.crimson_plank_secret_button": "Crimson Plank Secret Button",
     "block.infinitybuttons.warped_plank_secret_button": "Warped Plank Secret Button",
 
+    "block.infinitybuttons.carpenter_acacia_bookshelf_secret_button": "Acacia Bookshelf Secret Button",
+    "block.infinitybuttons.carpenter_birch_bookshelf_secret_button": "Birch Bookshelf Secret Button",
+    "block.infinitybuttons.carpenter_crimson_bookshelf_secret_button": "Crimson Bookshelf Secret Button",
+    "block.infinitybuttons.carpenter_dark_oak_bookshelf_secret_button": "Dark Oak Bookshelf Secret Button",
+    "block.infinitybuttons.carpenter_jungle_bookshelf_secret_button": "Jungle Bookshelf Secret Button",
+    "block.infinitybuttons.carpenter_spruce_bookshelf_secret_button": "Spruce Bookshelf Secret Button",
+    "block.infinitybuttons.carpenter_warped_bookshelf_secret_button": "Warped Bookshelf Secret Button",
+
     "block.infinitybuttons.doorbell": "Doorbell",
     "block.infinitybuttons.doorbell_button": "Doorbell Button",
     "block.infinitybuttons.hoglin_mount_button": "Hoglin Mount Button",

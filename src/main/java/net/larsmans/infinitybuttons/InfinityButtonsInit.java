@@ -1,12 +1,13 @@
 package net.larsmans.infinitybuttons;
 
 import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
+import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
-import net.larsmans.infinitybuttons.compatregistries.NethersDelightBlocks;
-import net.larsmans.infinitybuttons.compatregistries.NethersDelightItems;
+import net.larsmans.infinitybuttons.compat.CarpenterBlocks;
+import net.larsmans.infinitybuttons.compat.NethersDelightBlocks;
+import net.larsmans.infinitybuttons.compat.NethersDelightItems;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import org.slf4j.Logger;
@@ -19,7 +20,7 @@ public class InfinityButtonsInit implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		AutoConfig.register(InfinityButtonsConfig.class, Toml4jConfigSerializer::new);
+		AutoConfig.register(InfinityButtonsConfig.class, JanksonConfigSerializer::new);
 		config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
 
 		InfinityButtonsItems.registerModItems();
@@ -29,6 +30,10 @@ public class InfinityButtonsInit implements ModInitializer {
 		if (FabricLoader.getInstance().isModLoaded("nethersdelight")) {
 			NethersDelightItems.registerCompatItems();
 			NethersDelightBlocks.registerCompatBlocks();
+		}
+
+		if (FabricLoader.getInstance().isModLoaded("carpenter")) {
+			CarpenterBlocks.registerCompatBlocks();
 		}
 	}
 }
