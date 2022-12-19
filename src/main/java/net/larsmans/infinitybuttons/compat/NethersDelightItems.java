@@ -15,7 +15,7 @@ public class NethersDelightItems {
     public static final Item PROPELPLANT_TORCH_LEVER = registerItem("propelplant_torch_lever", new WallStandingBlockItem(NethersDelightBlocks.PROPELPLANT_TORCH_LEVER, NethersDelightBlocks.PROPELPLANT_WALL_TORCH_LEVER, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
 
     private static Item registerItem(String name, Item item) {
-        return Registry.register(Registry.ITEM, new Identifier(InfinityButtonsInit.MOD_ID, name), item);
+        return Registry.register(Registry.ITEM, new Identifier("infinitybuttons", name), item);
     }
 
     public static void registerCompatItems() {

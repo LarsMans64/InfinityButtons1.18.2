@@ -8,38 +8,31 @@ import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroup;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class CarpenterBlocks {
+
+    public static final Block SPRUCE_BOOKSHELF_SECRET_BUTTON = registerBookshelfSecretButton("spruce");
+    public static final Block BIRCH_BOOKSHELF_SECRET_BUTTON = registerBookshelfSecretButton("birch");
+    public static final Block JUNGLE_BOOKSHELF_SECRET_BUTTON = registerBookshelfSecretButton("jungle");
+    public static final Block ACACIA_BOOKSHELF_SECRET_BUTTON = registerBookshelfSecretButton("acacia");
+    public static final Block DARK_OAK_BOOKSHELF_SECRET_BUTTON = registerBookshelfSecretButton("dark_oak");
+    public static final Block CRIMSON_BOOKSHELF_SECRET_BUTTON = registerBookshelfSecretButton("crimson");
+    public static final Block WARPED_BOOKSHELF_SECRET_BUTTON = registerBookshelfSecretButton("warped");
     
-    private static final Block BIRCH_BOOKSHELF_SECRET_BUTTON = registerBookshelf("birch");
-    
-    private static final Block SPRUCE_BOOKSHELF_SECRET_BUTTON = registerBookshelf("spruce");
-    
-    private static final Block ACACIA_BOOKSHELF_SECRET_BUTTON = registerBookshelf("acacia");
-    
-    private static final Block DARK_OAK_BOOKSHELF_SECRET_BUTTON = registerBookshelf("dark_oak");
-    
-    private static final Block JUNGLE_BOOKSHELF_SECRET_BUTTON = registerBookshelf("jungle");
-    
-    private static final Block CRIMSON_BOOKSHELF_SECRET_BUTTON = registerBookshelf("crimson");
-    
-    private static final Block WARPED_BOOKSHELF_SECRET_BUTTON = registerBookshelf("warped");
-    
-    private static final Block registerBookshelf(String wood) {
-        return registerBlock("carpenter_" + wood + "_bookshelf_secret_button", new BookshelfSecretButton(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.WOOD).strength(1.5f)));
+    private static Block registerBookshelfSecretButton(String name) {
+        return registerBlockWithItem("carpenter_" + name + "_bookshelf_secret_button", new BookshelfSecretButton(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.WOOD).strength(1.5f)));
     }
 
-    private static Block registerBlock(String name, Block block) {
+    private static Block registerBlockWithItem(String name, Block block) {
         registerBlockItem(name, block);
-        return Registry.register(Registry.BLOCK, new Identifier(InfinityButtonsInit.MOD_ID, name), block);
+        return Registry.register(Registry.BLOCK, new Identifier("infinitybuttons", name), block);
     }
 
-    private static Item registerBlockItem(String name, Block block) {
-        return Registry.register(Registry.ITEM, new Identifier(InfinityButtonsInit.MOD_ID, name),
+    private static void registerBlockItem(String name, Block block) {
+        Registry.register(Registry.ITEM, new Identifier("infinitybuttons", name),
                 new BlockItem(block, new FabricItemSettings().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
     }
 

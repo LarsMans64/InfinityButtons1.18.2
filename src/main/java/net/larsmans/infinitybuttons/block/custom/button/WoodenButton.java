@@ -6,7 +6,7 @@ import net.minecraft.sound.SoundEvents;
 
 public class WoodenButton extends AbstractButton {
 
-    protected WoodenButton(FabricBlockSettings settings) {
+    public WoodenButton(FabricBlockSettings settings) {
         super(true, settings);
     }
 
