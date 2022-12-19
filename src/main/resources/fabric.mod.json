@@ -26,6 +26,9 @@
         ],
         "modmenu": [
             "net.larsmans.infinitybuttons.ModMenuIntegration"
+        ],
+        "preLaunch": [
+            "com.llamalad7.mixinextras.MixinExtrasBootstrap::init"
         ]
     },
     "mixins": [
