@@ -68,6 +68,11 @@ public class InfinityButtonsBlocks {
     public static final Block RED_SAND_BUTTON = registerSandButton("red_sand", false);
     public static final Block GRAVEL_BUTTON = registerSandButton("gravel", true);
 
+    public static final Block WHITE_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("white");
+    public static final Block LIGHT_GRAY_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("light_gray");
+    public static final Block GRAY_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("gray");
+    public static final Block BLACK_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("black");
+    public static final Block BROWN_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("brown");
     public static final Block RED_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("red");
     public static final Block ORANGE_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("orange");
     public static final Block YELLOW_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("yellow");
@@ -79,11 +84,6 @@ public class InfinityButtonsBlocks {
     public static final Block PURPLE_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("purple");
     public static final Block MAGENTA_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("magenta");
     public static final Block PINK_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("pink");
-    public static final Block BROWN_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("brown");
-    public static final Block WHITE_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("white");
-    public static final Block LIGHT_GRAY_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("light_gray");
-    public static final Block GRAY_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("gray");
-    public static final Block BLACK_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("black");
 
     public static Block registerStoneButton(String name) {
         return registerBlockWithItem(name + "_button", new StoneButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).collidable(false).nonOpaque().sounds(BlockSoundGroup.STONE)));
@@ -163,6 +163,11 @@ public class InfinityButtonsBlocks {
     public static final Block RED_SAND_LARGE_BUTTON = registerSandLargeButton("red_sand", false);
     public static final Block GRAVEL_LARGE_BUTTON = registerSandLargeButton("gravel", true);
 
+    public static final Block WHITE_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("white");
+    public static final Block LIGHT_GRAY_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("light_gray");
+    public static final Block GRAY_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("gray");
+    public static final Block BLACK_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("black");
+    public static final Block BROWN_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("brown");
     public static final Block RED_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("red");
     public static final Block ORANGE_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("orange");
     public static final Block YELLOW_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("yellow");
@@ -174,11 +179,6 @@ public class InfinityButtonsBlocks {
     public static final Block PURPLE_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("purple");
     public static final Block MAGENTA_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("magenta");
     public static final Block PINK_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("pink");
-    public static final Block BROWN_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("brown");
-    public static final Block WHITE_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("white");
-    public static final Block LIGHT_GRAY_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("light_gray");
-    public static final Block GRAY_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("gray");
-    public static final Block BLACK_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("black");
 
     public static Block registerWoodenLargeButton(String name) {
         return registerBlockWithItem(name + "_large_button", new WoodenLargeButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).collidable(false).nonOpaque().sounds(BlockSoundGroup.WOOD)));
@@ -216,6 +216,11 @@ public class InfinityButtonsBlocks {
      * Emergency Buttons
      */
 
+    public static final Block WHITE_EMERGENCY_BUTTON = registerEmergencyButton("white");
+    public static final Block LIGHT_GRAY_EMERGENCY_BUTTON = registerEmergencyButton("light_gray");
+    public static final Block GRAY_EMERGENCY_BUTTON = registerEmergencyButton("gray");
+    public static final Block BLACK_EMERGENCY_BUTTON = registerEmergencyButton("black");
+    public static final Block BROWN_EMERGENCY_BUTTON = registerEmergencyButton("brown");
     public static final Block RED_EMERGENCY_BUTTON = registerEmergencyButton("red");
     public static final Block ORANGE_EMERGENCY_BUTTON = registerEmergencyButton("orange");
     public static final Block YELLOW_EMERGENCY_BUTTON = registerEmergencyButton("yellow");
@@ -227,13 +232,13 @@ public class InfinityButtonsBlocks {
     public static final Block PURPLE_EMERGENCY_BUTTON = registerEmergencyButton("purple");
     public static final Block MAGENTA_EMERGENCY_BUTTON = registerEmergencyButton("magenta");
     public static final Block PINK_EMERGENCY_BUTTON = registerEmergencyButton("pink");
-    public static final Block BROWN_EMERGENCY_BUTTON = registerEmergencyButton("brown");
-    public static final Block WHITE_EMERGENCY_BUTTON = registerEmergencyButton("white");
-    public static final Block LIGHT_GRAY_EMERGENCY_BUTTON = registerEmergencyButton("light_gray");
-    public static final Block GRAY_EMERGENCY_BUTTON = registerEmergencyButton("gray");
-    public static final Block BLACK_EMERGENCY_BUTTON = registerEmergencyButton("black");
     public static final Block FANCY_EMERGENCY_BUTTON = registerEmergencyButton("fancy");
 
+    public static final Block WHITE_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("white");
+    public static final Block LIGHT_GRAY_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("light_gray");
+    public static final Block GRAY_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("gray");
+    public static final Block BLACK_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("black");
+    public static final Block BROWN_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("brown");
     public static final Block RED_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("red");
     public static final Block ORANGE_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("orange");
     public static final Block YELLOW_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("yellow");
@@ -245,11 +250,6 @@ public class InfinityButtonsBlocks {
     public static final Block PURPLE_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("purple");
     public static final Block MAGENTA_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("magenta");
     public static final Block PINK_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("pink");
-    public static final Block BROWN_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("brown");
-    public static final Block WHITE_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("white");
-    public static final Block LIGHT_GRAY_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("light_gray");
-    public static final Block GRAY_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("gray");
-    public static final Block BLACK_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("black");
     public static final Block FANCY_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("fancy");
 
     public static Block registerEmergencyButton(String name) {
@@ -294,14 +294,14 @@ public class InfinityButtonsBlocks {
     public static final Block CRACKED_DEEPSLATE_TILE_SECRET_BUTTON = registerBlockWithItem("cracked_deepslate_tile_secret_button",
             new DeepslateTileSecretButton(FabricBlockSettings.of(Material.STONE, MapColor.DEEPSLATE_GRAY).nonOpaque().sounds(BlockSoundGroup.DEEPSLATE_TILES).requiresTool().strength(3.5f, 6.0f)));
 
-    public static final Block OAK_PLANK_SECRET_BUTTON = registerPlankSecretButton("oak", Material.WOOD, MapColor.OAK_TAN);
-    public static final Block SPRUCE_PLANK_SECRET_BUTTON = registerPlankSecretButton("spruce", Material.WOOD, MapColor.SPRUCE_BROWN);
-    public static final Block BIRCH_PLANK_SECRET_BUTTON = registerPlankSecretButton("birch", Material.WOOD, MapColor.PALE_YELLOW);
-    public static final Block JUNGLE_PLANK_SECRET_BUTTON = registerPlankSecretButton("jungle", Material.WOOD, MapColor.DIRT_BROWN);
-    public static final Block ACACIA_PLANK_SECRET_BUTTON = registerPlankSecretButton("acacia", Material.WOOD, MapColor.ORANGE);
-    public static final Block DARK_OAK_PLANK_SECRET_BUTTON = registerPlankSecretButton("dark_oak", Material.WOOD, MapColor.BROWN);
-    public static final Block CRIMSON_PLANK_SECRET_BUTTON = registerPlankSecretButton("crimson", Material.NETHER_WOOD, MapColor.DULL_PINK);
-    public static final Block WARPED_PLANK_SECRET_BUTTON = registerPlankSecretButton("warped", Material.NETHER_WOOD, MapColor.DARK_AQUA);
+    public static final Block OAK_PLANK_SECRET_BUTTON = registerPlankSecretButton("oak", MapColor.OAK_TAN);
+    public static final Block SPRUCE_PLANK_SECRET_BUTTON = registerPlankSecretButton("spruce", MapColor.SPRUCE_BROWN);
+    public static final Block BIRCH_PLANK_SECRET_BUTTON = registerPlankSecretButton("birch", MapColor.PALE_YELLOW);
+    public static final Block JUNGLE_PLANK_SECRET_BUTTON = registerPlankSecretButton("jungle", MapColor.DIRT_BROWN);
+    public static final Block ACACIA_PLANK_SECRET_BUTTON = registerPlankSecretButton("acacia", MapColor.ORANGE);
+    public static final Block DARK_OAK_PLANK_SECRET_BUTTON = registerPlankSecretButton("dark_oak", MapColor.BROWN);
+    public static final Block CRIMSON_PLANK_SECRET_BUTTON = registerNetherPlankSecretButton("crimson", MapColor.DULL_PINK);
+    public static final Block WARPED_PLANK_SECRET_BUTTON = registerNetherPlankSecretButton("warped", MapColor.DARK_AQUA);
 
     public static final Block END_STONE_BRICK_SECRET_BUTTON = registerBlockWithItem("end_stone_brick_secret_button",
             new BigBrickSecretButton(FabricBlockSettings.of(Material.STONE, MapColor.PALE_YELLOW).nonOpaque().sounds(BlockSoundGroup.STONE).requiresTool().strength(3.0f, 9.0f)));
@@ -333,8 +333,12 @@ public class InfinityButtonsBlocks {
     public static final Block RED_NETHER_BRICK_SECRET_BUTTON = registerBlockWithItem("red_nether_brick_secret_button",
             new FullBlockBrickSecretButton(FabricBlockSettings.of(Material.STONE, MapColor.DARK_RED).nonOpaque().sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool().strength(2.0f, 6.0f)));
 
-    public static Block registerPlankSecretButton(String name, Material material, MapColor color) {
-        return registerBlockWithItem(name + "_plank_secret_button", new PlankSecretButton(FabricBlockSettings.of(material, color).nonOpaque().sounds(BlockSoundGroup.WOOD).strength(2.0f, 3.0f)));
+    public static Block registerPlankSecretButton(String name, MapColor color) {
+        return registerBlockWithItem(name + "_plank_secret_button", new PlankSecretButton(FabricBlockSettings.of(Material.WOOD, color).nonOpaque().sounds(BlockSoundGroup.WOOD).strength(2.0f, 3.0f)));
+    }
+
+    public static Block registerNetherPlankSecretButton(String name, MapColor color) {
+        return registerBlockWithItem(name + "_plank_secret_button", new PlankSecretButton(FabricBlockSettings.of(Material.NETHER_WOOD, color).nonOpaque().sounds(BlockSoundGroup.WOOD).strength(2.0f, 3.0f)));
     }
 
     /**
