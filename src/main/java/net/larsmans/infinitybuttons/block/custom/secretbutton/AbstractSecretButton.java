@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.ShapeContext;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.server.world.ServerWorld;
@@ -73,19 +72,18 @@ public abstract class AbstractSecretButton extends HorizontalFacingBlock {
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos,
-                              PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (state.get(PRESSED)) {
-            return ActionResult.CONSUME;
+            return ActionResult.FAIL;
         }
         this.powerOn(state, world, pos);
         this.playClickSound(player, world, pos, true);
-        world.emitGameEvent((Entity)player, GameEvent.BLOCK_PRESS, pos);
+        world.emitGameEvent(player, GameEvent.BLOCK_PRESS, pos);
         return ActionResult.success(world.isClient);
     }
 
     public void powerOn(BlockState state, World world, BlockPos pos) {
-        world.setBlockState(pos, (BlockState)state.with(PRESSED, true), Block.NOTIFY_ALL);
+        world.setBlockState(pos, state.with(PRESSED, true), Block.NOTIFY_ALL);
         this.updateNeighbors(state, world, pos);
         world.createAndScheduleBlockTick(pos, this, 50);
     }
@@ -128,7 +126,7 @@ public abstract class AbstractSecretButton extends HorizontalFacingBlock {
     @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (state.get(PRESSED)) {
-            world.setBlockState(pos, (BlockState)state.with(PRESSED, false), Block.NOTIFY_ALL);
+            world.setBlockState(pos, state.with(PRESSED, false), Block.NOTIFY_ALL);
             this.updateNeighbors(state, world, pos);
             this.playClickSound(null, world, pos, false);
             world.emitGameEvent(null, GameEvent.BLOCK_UNPRESS, pos);
