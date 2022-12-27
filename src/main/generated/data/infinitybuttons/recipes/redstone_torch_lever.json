@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "C",
+    "#",
+    "S"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:redstone"
+    },
+    "#": {
+      "item": "minecraft:lever"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "infinitybuttons:redstone_torch_lever"
+  }
+}

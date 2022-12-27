@@ -3,7 +3,7 @@ package net.larsmans.infinitybuttons.mixin;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.fabricmc.loader.api.FabricLoader;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
-import net.larsmans.infinitybuttons.compat.CarpenterBlocks;
+import net.larsmans.infinitybuttons.compat.IBCarpenterBlocks;
 import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.EnchantingTableBlock;
 import net.minecraft.util.math.BlockPos;
@@ -25,13 +25,13 @@ public abstract class EnchantingTableBlockMixin extends BlockWithEntity {
         if (FabricLoader.getInstance().isModLoaded("carpenter")) {
             return (original
                     || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(InfinityButtonsBlocks.BOOKSHELF_SECRET_BUTTON)
-                    || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(CarpenterBlocks.ACACIA_BOOKSHELF_SECRET_BUTTON)
-                    || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(CarpenterBlocks.BIRCH_BOOKSHELF_SECRET_BUTTON)
-                    || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(CarpenterBlocks.CRIMSON_BOOKSHELF_SECRET_BUTTON)
-                    || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(CarpenterBlocks.DARK_OAK_BOOKSHELF_SECRET_BUTTON)
-                    || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(CarpenterBlocks.JUNGLE_BOOKSHELF_SECRET_BUTTON)
-                    || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(CarpenterBlocks.SPRUCE_BOOKSHELF_SECRET_BUTTON)
-                    || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(CarpenterBlocks.WARPED_BOOKSHELF_SECRET_BUTTON));
+                    || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(IBCarpenterBlocks.ACACIA_BOOKSHELF_SECRET_BUTTON)
+                    || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(IBCarpenterBlocks.BIRCH_BOOKSHELF_SECRET_BUTTON)
+                    || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(IBCarpenterBlocks.CRIMSON_BOOKSHELF_SECRET_BUTTON)
+                    || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(IBCarpenterBlocks.DARK_OAK_BOOKSHELF_SECRET_BUTTON)
+                    || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(IBCarpenterBlocks.JUNGLE_BOOKSHELF_SECRET_BUTTON)
+                    || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(IBCarpenterBlocks.SPRUCE_BOOKSHELF_SECRET_BUTTON)
+                    || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(IBCarpenterBlocks.WARPED_BOOKSHELF_SECRET_BUTTON));
         }
         return (original || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(InfinityButtonsBlocks.BOOKSHELF_SECRET_BUTTON));
     }

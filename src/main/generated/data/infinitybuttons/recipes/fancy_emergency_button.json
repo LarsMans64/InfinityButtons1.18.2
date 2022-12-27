@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GBG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "B": {
+      "tag": "infinitybuttons:emergency_buttons"
+    }
+  },
+  "result": {
+    "item": "infinitybuttons:fancy_emergency_button"
+  }
+}

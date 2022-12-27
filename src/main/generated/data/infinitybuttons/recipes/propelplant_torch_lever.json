@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P",
+    "#",
+    "C"
+  ],
+  "key": {
+    "P": {
+      "item": "nethersdelight:propelpearl"
+    },
+    "#": {
+      "item": "minecraft:lever"
+    },
+    "C": {
+      "item": "nethersdelight:propelplant_cane"
+    }
+  },
+  "result": {
+    "item": "infinitybuttons:propelplant_torch_lever"
+  }
+}

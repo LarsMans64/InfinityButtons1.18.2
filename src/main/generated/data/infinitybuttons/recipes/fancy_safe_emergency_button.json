@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GBG"
+  ],
+  "key": {
+    "G": {
+      "tag": "c:glass_panes"
+    },
+    "B": {
+      "item": "infinitybuttons:fancy_emergency_button"
+    }
+  },
+  "result": {
+    "item": "infinitybuttons:fancy_safe_emergency_button"
+  }
+}

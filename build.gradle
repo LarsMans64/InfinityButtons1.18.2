@@ -37,15 +37,16 @@ dependencies {
 	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 	modApi "com.terraformersmc:modmenu:3.2.4"
 
-	modCompileOnly("curse.maven:nethers-delight-fabric-701831:4085714")
-	modCompileOnly("curse.maven:carpenter-549446:3972070")
+	modImplementation("curse.maven:farmers-delight-fabric-482834:4111479")
+	modImplementation("curse.maven:nethers-delight-fabric-701831:4085714")
+	modImplementation("curse.maven:pollen-544350:3972066")
+	modImplementation("curse.maven:carpenter-549446:3972070")
 
 	modApi("me.shedaniel.cloth:cloth-config-fabric:6.4.90") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
 
-	implementation("com.github.LlamaLad7:MixinExtras:0.1.1")
-	annotationProcessor("com.github.LlamaLad7:MixinExtras:0.1.1")
+	include(implementation(annotationProcessor("com.github.LlamaLad7:MixinExtras:0.1.1")))
 }
 
 processResources {
@@ -88,5 +89,35 @@ publishing {
 		// Notice: This block does NOT have the same function as the block in the top level.
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
+	}
+}
+
+loom {
+	runs {
+		//
+		// This adds a new gradle task that runs the datagen API: "gradlew runDatagenClient"
+		//
+		datagenClient {
+			inherit client
+			name "Data Generation"
+			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+			vmArg "-Dfabric-api.datagen.modid=infinitybuttons"
+
+			runDir "build/datagen"
+		}
+	}
+}
+
+//
+// Adds the generated files into the jar you distribute to players.
+//
+sourceSets {
+	main {
+		resources {
+			srcDirs += [
+					'src/main/generated'
+			]
+		}
 	}
 }

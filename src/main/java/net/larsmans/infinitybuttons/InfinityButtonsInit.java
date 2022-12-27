@@ -5,9 +5,9 @@ import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
-import net.larsmans.infinitybuttons.compat.CarpenterBlocks;
-import net.larsmans.infinitybuttons.compat.NethersDelightBlocks;
-import net.larsmans.infinitybuttons.compat.NethersDelightItems;
+import net.larsmans.infinitybuttons.compat.IBCarpenterBlocks;
+import net.larsmans.infinitybuttons.compat.IBNethersDelightBlocks;
+import net.larsmans.infinitybuttons.compat.IBNethersDelightItems;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import org.slf4j.Logger;
@@ -28,12 +28,12 @@ public class InfinityButtonsInit implements ModInitializer {
 		InfinityButtonsSounds.registerSounds();
 
 		if (FabricLoader.getInstance().isModLoaded("nethersdelight")) {
-			NethersDelightItems.registerCompatItems();
-			NethersDelightBlocks.registerCompatBlocks();
+			IBNethersDelightItems.registerCompatItems();
+			IBNethersDelightBlocks.registerCompatBlocks();
 		}
 
 		if (FabricLoader.getInstance().isModLoaded("carpenter")) {
-			CarpenterBlocks.registerCompatBlocks();
+			IBCarpenterBlocks.registerCompatBlocks();
 		}
 	}
 }

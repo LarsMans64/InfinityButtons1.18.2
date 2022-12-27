@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "safe_emergency_buttons",
+  "pattern": [
+    "GGG",
+    "GBG"
+  ],
+  "key": {
+    "G": {
+      "tag": "c:glass_panes"
+    },
+    "B": {
+      "item": "infinitybuttons:light_blue_emergency_button"
+    }
+  },
+  "result": {
+    "item": "infinitybuttons:light_blue_safe_emergency_button"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C",
+    "#S",
+    " O"
+  ],
+  "key": {
+    "C": {
+      "tag": "minecraft:coals"
+    },
+    "#": {
+      "item": "minecraft:stone_button"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "O": {
+      "tag": "minecraft:soul_fire_base_blocks"
+    }
+  },
+  "result": {
+    "item": "infinitybuttons:soul_torch_button"
+  }
+}

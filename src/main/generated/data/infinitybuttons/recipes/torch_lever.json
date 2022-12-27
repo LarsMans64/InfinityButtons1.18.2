@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "C",
+    "#",
+    "S"
+  ],
+  "key": {
+    "C": {
+      "tag": "minecraft:coals"
+    },
+    "#": {
+      "item": "minecraft:lever"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "infinitybuttons:torch_lever"
+  }
+}

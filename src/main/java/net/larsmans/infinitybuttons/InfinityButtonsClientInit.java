@@ -4,7 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.loader.api.FabricLoader;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
-import net.larsmans.infinitybuttons.compat.NethersDelightBlocks;
+import net.larsmans.infinitybuttons.compat.IBNethersDelightBlocks;
 import net.minecraft.client.render.RenderLayer;
 
 public class InfinityButtonsClientInit implements ClientModInitializer {
@@ -42,10 +42,10 @@ public class InfinityButtonsClientInit implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(InfinityButtonsBlocks.FANCY_SAFE_EMERGENCY_BUTTON, RenderLayer.getCutout());
 
         if (FabricLoader.getInstance().isModLoaded("nethersdelight")) {
-            BlockRenderLayerMap.INSTANCE.putBlock(NethersDelightBlocks.PROPELPLANT_TORCH_BUTTON, RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(NethersDelightBlocks.PROPELPLANT_WALL_TORCH_BUTTON, RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(NethersDelightBlocks.PROPELPLANT_TORCH_LEVER, RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(NethersDelightBlocks.PROPELPLANT_WALL_TORCH_LEVER, RenderLayer.getCutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(IBNethersDelightBlocks.PROPELPLANT_TORCH_BUTTON, RenderLayer.getCutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(IBNethersDelightBlocks.PROPELPLANT_WALL_TORCH_BUTTON, RenderLayer.getCutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(IBNethersDelightBlocks.PROPELPLANT_TORCH_LEVER, RenderLayer.getCutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(IBNethersDelightBlocks.PROPELPLANT_WALL_TORCH_LEVER, RenderLayer.getCutout());
         }
     }
 }
