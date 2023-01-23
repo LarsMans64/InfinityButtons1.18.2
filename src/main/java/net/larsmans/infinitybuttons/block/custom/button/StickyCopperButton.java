@@ -1,21 +1,17 @@
 package net.larsmans.infinitybuttons.block.custom.button;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.larsmans.infinitybuttons.InfinityButtonsInit;
+import net.larsmans.infinitybuttons.block.InfinityButtonsUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -29,8 +25,8 @@ import java.util.List;
 
 public class StickyCopperButton extends AbstractButton {
 
-    public StickyCopperButton(FabricBlockSettings settings) {
-        super(false, settings);
+    public StickyCopperButton(FabricBlockSettings settings, boolean large) {
+        super(false, large, settings);
     }
 
     @Override
@@ -44,23 +40,23 @@ public class StickyCopperButton extends AbstractButton {
         if (state.get(PRESSED)) {
             this.powerOff(state, world, pos);
             this.playClickSound(player, world, pos, false);
-            world.emitGameEvent((Entity)player, GameEvent.BLOCK_UNPRESS, pos);
+            world.emitGameEvent(player, GameEvent.BLOCK_UNPRESS, pos);
         } else {
             this.powerOn(state, world, pos);
             this.playClickSound(player, world, pos, true);
-            world.emitGameEvent((Entity)player, GameEvent.BLOCK_PRESS, pos);
+            world.emitGameEvent(player, GameEvent.BLOCK_PRESS, pos);
         }
         return ActionResult.success(world.isClient);
     }
 
     @Override
     public void powerOn(BlockState state, World world, BlockPos pos) {
-        world.setBlockState(pos, (BlockState)state.with(PRESSED, true), Block.NOTIFY_ALL);
+        world.setBlockState(pos, state.with(PRESSED, true), Block.NOTIFY_ALL);
         this.updateNeighbors(state, world, pos);
     }
 
     public void powerOff(BlockState state, World world, BlockPos pos) {
-        world.setBlockState(pos, (BlockState)state.with(PRESSED, false), Block.NOTIFY_ALL);
+        world.setBlockState(pos, state.with(PRESSED, false), Block.NOTIFY_ALL);
         this.updateNeighbors(state, world, pos);
     }
 
@@ -76,12 +72,6 @@ public class StickyCopperButton extends AbstractButton {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        if (InfinityButtonsInit.config.tooltips) {
-            if (Screen.hasShiftDown()) {
-                tooltip.add(new TranslatableText("infinitybuttons.tooltip.sticky_copper_button").formatted(Formatting.GRAY));
-            } else {
-                tooltip.add(new TranslatableText("infinitybuttons.tooltip.hold_shift").formatted(Formatting.GRAY));
-            }
-        }
+        InfinityButtonsUtil.tooltip(tooltip, "sticky_copper_button");
     }
 }

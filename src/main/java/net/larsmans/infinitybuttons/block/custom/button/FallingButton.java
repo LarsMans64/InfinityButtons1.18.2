@@ -1,18 +1,15 @@
 package net.larsmans.infinitybuttons.block.custom.button;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.larsmans.infinitybuttons.InfinityButtonsInit;
+import net.larsmans.infinitybuttons.block.InfinityButtonsUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 import org.jetbrains.annotations.Nullable;
@@ -24,8 +21,8 @@ public class FallingButton extends AbstractButton {
 
     public boolean gravel;
 
-    public FallingButton(boolean gravel, FabricBlockSettings settings) {
-        super(false, settings);
+    public FallingButton(boolean gravel, FabricBlockSettings settings, boolean large) {
+        super(false, large, settings);
         this.gravel = gravel;
     }
 
@@ -51,12 +48,6 @@ public class FallingButton extends AbstractButton {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        if (InfinityButtonsInit.config.tooltips) {
-            if (Screen.hasShiftDown()) {
-                tooltip.add(new TranslatableText("infinitybuttons.tooltip.falling_button").formatted(Formatting.GRAY));
-            } else {
-                tooltip.add(new TranslatableText("infinitybuttons.tooltip.hold_shift").formatted(Formatting.GRAY));
-            }
-        }
+        InfinityButtonsUtil.tooltip(tooltip, "falling_button");
     }
 }

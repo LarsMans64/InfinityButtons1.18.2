@@ -8,7 +8,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class PropelTorchLever extends TorchLever{
+public class PropelTorchLever extends TorchLever {
     public PropelTorchLever(FabricBlockSettings settings) {
         super(settings, ParticleTypes.FLAME);
     }

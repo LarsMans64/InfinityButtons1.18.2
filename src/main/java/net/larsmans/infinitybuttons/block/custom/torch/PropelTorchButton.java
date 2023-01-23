@@ -8,7 +8,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class PropelTorchButton extends TorchButton{
+public class PropelTorchButton extends TorchButton {
     public PropelTorchButton(FabricBlockSettings settings) {
         super(settings, ParticleTypes.FLAME);
     }
