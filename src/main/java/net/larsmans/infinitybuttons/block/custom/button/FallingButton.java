@@ -17,7 +17,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Random;
 
-public class FallingButton extends AbstractButton {
+public class FallingButton extends AbstractSmallButton {
 
     public boolean gravel;
 
