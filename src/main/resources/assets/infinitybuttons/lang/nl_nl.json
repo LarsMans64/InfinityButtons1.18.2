@@ -211,12 +211,14 @@
     "infinitybuttons.actionbar.closed_safety_button": "Sluip met een lege hand om te openen en sluiten",
 
     "text.autoconfig.infinitybuttons.option.alarmSoundType": "Alarmgeluid",
-    "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip": "De manier waarop de noodknoppen een alarmgeluid maken",
+    "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[0]": "De manier waarop noodknoppen een alarmgeluid maken",
+    "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[1]": "BEREIK: Het geluid is hoorbaar tot een bepaalde radius",
+    "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[2]": "GLOBAAL: Het geluid is overal in de wereld hoorbaar",
     "text.autoconfig.infinitybuttons.option.alarmSoundRange": "Alarmgeluid bereik",
     "text.autoconfig.infinitybuttons.option.alarmSoundRange.@Tooltip": "Het bereik waarin het alarmgeluid hoorbaar is wanneer 'Alarmgeluid' is ingesteld op 'RANGE'",
     "text.autoconfig.infinitybuttons.option.tooltips": "Tooltips",
     "text.autoconfig.infinitybuttons.option.tooltips.@Tooltip": "Of tooltips worden weergegeven",
     "text.autoconfig.infinitybuttons.option.diamondParticles": "Diamanten-knopdeeltjes",
-    "text.autoconfig.infinitybuttons.option.diamondParticles.@Tooltip": "Of de diamanten knoppen deeltjes zullen hebben",
+    "text.autoconfig.infinitybuttons.option.diamondParticles.@Tooltip": "Of er deeltjes om diamanten knoppen komen",
     "text.autoconfig.infinitybuttons.title": "Infinity Buttons Configuratie"
 }
