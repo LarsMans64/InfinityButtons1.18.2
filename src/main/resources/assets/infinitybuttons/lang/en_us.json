@@ -203,12 +203,12 @@
     "infinitybuttons.tooltip.diamond_button": "The biggest flex in the west",
     "infinitybuttons.tooltip.prismarine_button": "This button can be waterlogged",
     "infinitybuttons.tooltip.falling_button": "This button can only be pressed once",
-    "infinitybuttons.tooltip.safe_emergency_button": "Sneak with an empty hand to open and close",
+    "infinitybuttons.tooltip.safe_emergency_button": "Sneak to open and close",
     "infinitybuttons.tooltip.doorbell_button": "This doorbell emits a redstone signal",
 
     "itemGroup.infinitybuttons.infinitybuttons": "Infinity Buttons",
 
-    "infinitybuttons.actionbar.closed_safety_button": "Sneak with an empty hand to open and close",
+    "infinitybuttons.actionbar.closed_safety_button": "Sneak to open and close",
 
     "text.autoconfig.infinitybuttons.option.alarmSoundType": "Alarm Sound",
     "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[0]": "The way Emergency Buttons make an alarm sound",
