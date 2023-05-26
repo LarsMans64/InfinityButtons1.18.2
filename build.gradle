@@ -37,10 +37,10 @@ dependencies {
 	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 	modApi "com.terraformersmc:modmenu:3.2.4"
 
-	modImplementation("curse.maven:farmers-delight-fabric-482834:4111479")
-	modImplementation("curse.maven:nethers-delight-fabric-701831:4085714")
-	modImplementation("curse.maven:pollen-544350:3972066")
-	modImplementation("curse.maven:carpenter-549446:3972070")
+	modCompileOnlyApi("curse.maven:farmers-delight-fabric-482834:4111479")
+	modCompileOnlyApi("curse.maven:nethers-delight-fabric-701831:4085714")
+	modCompileOnlyApi("curse.maven:pollen-544350:3972066")
+	modCompileOnlyApi("curse.maven:carpenter-549446:3972070")
 
 	modApi("me.shedaniel.cloth:cloth-config-fabric:6.4.90") {
 		exclude(group: "net.fabricmc.fabric-api")
