@@ -217,8 +217,8 @@
 
     "text.autoconfig.infinitybuttons.option.alarmSoundType": "Alarmgeluid",
     "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[0]": "De manier waarop noodknoppen een alarmgeluid maken",
-    "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[1]": "BEREIK: Het geluid is hoorbaar tot een bepaalde radius",
-    "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[2]": "GLOBAAL: Het geluid is overal in de wereld hoorbaar",
+    "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[1]": "RANGE: Het geluid is hoorbaar tot een bepaalde radius",
+    "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[2]": "GLOBAL: Het geluid is overal in de wereld hoorbaar",
     "text.autoconfig.infinitybuttons.option.alarmSoundRange": "Alarmgeluid bereik",
     "text.autoconfig.infinitybuttons.option.alarmSoundRange.@Tooltip": "Het bereik waarin het alarmgeluid hoorbaar is wanneer 'Alarmgeluid' is ingesteld op 'RANGE'",
     "text.autoconfig.infinitybuttons.option.tooltips": "Tooltips",
