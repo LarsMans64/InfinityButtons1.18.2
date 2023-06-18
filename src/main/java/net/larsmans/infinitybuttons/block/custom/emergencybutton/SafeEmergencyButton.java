@@ -22,7 +22,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -221,7 +220,7 @@ public class SafeEmergencyButton extends WallMountedBlock {
                     this.openCase(state, world, pos);
                     this.playToggleSound(player, world, pos, true);
                 } else {
-                    player.sendMessage(new TranslatableText("infinitybuttons.actionbar.closed_safety_button"), true);
+                    player.sendMessage(InfinityButtonsUtil.SAFE_EMERGENCY_BUTTON_ACTIONBAR_TEXT, true);
                     return ActionResult.CONSUME;
                 }
             }

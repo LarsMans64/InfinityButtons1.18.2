@@ -195,6 +195,8 @@
     "block.infinitybuttons.propelplant_torch_button": "Propelplantfakkelknop",
     "block.infinitybuttons.propelplant_torch_lever": "Propelplantfakkelhendel",
 
+    "itemGroup.infinitybuttons.infinitybuttons": "Infinity Buttons",
+
     "infinitybuttons.subtitle.alarm": "Alarm gaat af",
     "infinitybuttons.subtitle.stone_scrape": "Steen verschuift",
     "infinitybuttons.subtitle.wood_scrape": "Hout verschuift",
@@ -212,16 +214,16 @@
     "infinitybuttons.tooltip.doorbell_button": "Deze deurbel produceert een redstone-signaal",
     "infinitybuttons.tooltip.lantern_button": "Produceert een redstone-signaal bij de bovenste ketting boven de lantaarn",
 
-    "itemGroup.infinitybuttons.infinitybuttons": "Infinity Buttons",
-
     "infinitybuttons.actionbar.closed_safety_button": "Sluip om te openen en sluiten",
 
     "text.autoconfig.infinitybuttons.option.alarmSoundType": "Alarmgeluid",
-    "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[0]": "De manier waarop noodknoppen een alarmgeluid maken",
-    "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[1]": "RANGE: Het geluid is hoorbaar tot een bepaalde radius",
-    "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[2]": "GLOBAL: Het geluid is overal in de wereld hoorbaar",
+    "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[0]": "De manier waarop noodknoppen alarmgeluiden maken",
+    "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[1]": "RANGE: Het alarm is hoorbaar tot een bepaalde radius",
+    "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[2]": "GLOBAL: Het alarm is overal in de wereld hoorbaar",
     "text.autoconfig.infinitybuttons.option.alarmSoundRange": "Alarmgeluid bereik",
-    "text.autoconfig.infinitybuttons.option.alarmSoundRange.@Tooltip": "Het bereik waarin het alarmgeluid hoorbaar is wanneer 'Alarmgeluid' is ingesteld op 'RANGE'",
+    "text.autoconfig.infinitybuttons.option.alarmSoundRange.@Tooltip": "De afstand in blokken waarin het alarmgeluid hoorbaar is wanneer 'Alarmgeluid' is ingesteld op 'RANGE'",
+    "text.autoconfig.infinitybuttons.option.alarmVillagerPanic": "Dorpelingpaniek",
+    "text.autoconfig.infinitybuttons.option.alarmVillagerPanic.@Tooltip": "Zorgt ervoor dat dorpelingen naar hun bed rennen als ze een alarm horen",
     "text.autoconfig.infinitybuttons.option.tooltips": "Tooltips",
     "text.autoconfig.infinitybuttons.option.tooltips.@Tooltip": "Of tooltips worden weergegeven",
     "text.autoconfig.infinitybuttons.option.diamondParticles": "Diamanten-knopdeeltjes",
