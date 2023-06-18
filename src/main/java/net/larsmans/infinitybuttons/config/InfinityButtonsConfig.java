@@ -16,6 +16,9 @@ public class InfinityButtonsConfig implements ConfigData {
     public int alarmSoundRange = 64;
 
     @ConfigEntry.Gui.Tooltip
+    public boolean alarmVillagerPanic = true;
+
+    @ConfigEntry.Gui.Tooltip
     public boolean tooltips = true;
 
     @ConfigEntry.Gui.Tooltip
