@@ -380,6 +380,8 @@ public class TagBlockGen extends FabricTagProvider<Block> {
                 .add(InfinityButtonsBlocks.SOUL_WALL_TORCH_BUTTON)
                 .add(InfinityButtonsBlocks.SOUL_TORCH_LEVER)
                 .add(InfinityButtonsBlocks.SOUL_WALL_TORCH_LEVER)
+                .add(InfinityButtonsBlocks.SOUL_LANTERN_BUTTON)
+                .add(InfinityButtonsBlocks.SOUL_LANTERN_LEVER)
         ;
 
         getOrCreateTagBuilder(STONE_BRICKS)
