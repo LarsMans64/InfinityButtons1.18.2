@@ -5,6 +5,7 @@ import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.loader.api.FabricLoader;
+import net.larsmans.infinitybuttons.advancement.InfinityButtonsTriggers;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
 import net.larsmans.infinitybuttons.block.custom.letterbutton.LetterButton;
 import net.larsmans.infinitybuttons.block.custom.letterbutton.LetterButtonEnum;
@@ -15,7 +16,6 @@ import net.larsmans.infinitybuttons.compat.IBNethersDelightItems;
 import net.larsmans.infinitybuttons.config.InfinityButtonsConfig;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
-import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.slf4j.Logger;
@@ -32,8 +32,7 @@ public class InfinityButtonsInit implements ModInitializer {
 			BlockPos pos = buf.readBlockPos();
 			LetterButtonEnum letterButtonEnum = buf.readEnumConstant(LetterButtonEnum.class);
 			World world = player.getWorld();
-			BlockState state = world.getBlockState(pos);
-			world.setBlockState(pos, state.with(LetterButton.CHARACTER, letterButtonEnum));
+			world.setBlockState(pos, world.getBlockState(pos).with(LetterButton.CHARACTER, letterButtonEnum));
 		});
 
 		AutoConfig.register(InfinityButtonsConfig.class, JanksonConfigSerializer::new);
@@ -42,6 +41,7 @@ public class InfinityButtonsInit implements ModInitializer {
 		InfinityButtonsItems.registerModItems();
 		InfinityButtonsBlocks.registerModBlocks();
 		InfinityButtonsSounds.registerSounds();
+		InfinityButtonsTriggers.register();
 
 		if (FabricLoader.getInstance().isModLoaded("nethersdelight")) {
 			IBNethersDelightItems.registerCompatItems();

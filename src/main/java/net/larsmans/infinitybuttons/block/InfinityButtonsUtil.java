@@ -23,7 +23,6 @@ import java.util.function.Supplier;
 public class InfinityButtonsUtil {
 
     public static final MutableText HOLD_SHIFT_TEXT = new TranslatableText("infinitybuttons.tooltip.hold_shift").formatted(Formatting.GRAY);
-
     public static final MutableText SAFE_EMERGENCY_BUTTON_ACTIONBAR_TEXT = new TranslatableText("infinitybuttons.actionbar.closed_safety_button");
 
     public static Supplier<BiMap<Block, Block>> NEXT_BY_BLOCK;
