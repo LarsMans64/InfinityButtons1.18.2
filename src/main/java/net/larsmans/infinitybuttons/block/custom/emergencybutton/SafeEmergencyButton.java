@@ -207,7 +207,7 @@ public class SafeEmergencyButton extends WallMountedBlock {
                         EmergencyButton.emergencySound(world, pos, player);
                     }
                     if (player instanceof ServerPlayerEntity) {
-                        InfinityButtonsTriggers.SAFETY_TRIGGER.trigger((ServerPlayerEntity) player);
+                        InfinityButtonsTriggers.EMERGENCY_TRIGGER.trigger((ServerPlayerEntity) player);
                     }
                     if (!world.isClient && InfinityButtonsInit.config.alarmVillagerPanic) {
                         List<LivingEntity> villagers = world.getEntitiesByClass(LivingEntity.class, new Box(pos).expand(InfinityButtonsInit.config.alarmSoundRange), entity -> entity.getType() == EntityType.VILLAGER);
