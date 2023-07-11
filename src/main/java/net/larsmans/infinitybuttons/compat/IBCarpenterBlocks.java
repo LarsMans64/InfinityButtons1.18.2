@@ -23,7 +23,11 @@ public class IBCarpenterBlocks {
     public static final Block WARPED_BOOKSHELF_SECRET_BUTTON = registerBookshelfSecretButton("warped");
     
     private static Block registerBookshelfSecretButton(String name) {
-        return registerBlockWithItem("carpenter_" + name + "_bookshelf_secret_button", new BookshelfSecretButton(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.WOOD).strength(1.5f)));
+        return registerBlockWithItem("carpenter_" + name + "_bookshelf_secret_button", new BookshelfSecretButton(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.WOOD).strength(1.5f), byName(name + "_bookshelf")));
+    }
+
+    private static Block byName(String block) {
+        return Registry.BLOCK.get(new Identifier("carpenter", block));
     }
 
     private static Block registerBlockWithItem(String name, Block block) {

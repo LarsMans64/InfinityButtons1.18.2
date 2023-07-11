@@ -11,6 +11,7 @@ import net.larsmans.infinitybuttons.block.custom.letterbutton.LetterButton;
 import net.larsmans.infinitybuttons.block.custom.letterbutton.LetterButtonEnum;
 import net.larsmans.infinitybuttons.block.custom.letterbutton.gui.LetterButtonGui;
 import net.larsmans.infinitybuttons.compat.IBCarpenterBlocks;
+import net.larsmans.infinitybuttons.compat.IBCreateBlocks;
 import net.larsmans.infinitybuttons.compat.IBNethersDelightBlocks;
 import net.larsmans.infinitybuttons.compat.IBNethersDelightItems;
 import net.larsmans.infinitybuttons.config.InfinityButtonsConfig;
@@ -50,6 +51,10 @@ public class InfinityButtonsInit implements ModInitializer {
 
 		if (FabricLoader.getInstance().isModLoaded("carpenter")) {
 			IBCarpenterBlocks.registerCompatBlocks();
+		}
+
+		if (FabricLoader.getInstance().isModLoaded("create")) {
+			IBCreateBlocks.registerCompatBlocks();
 		}
 	}
 }

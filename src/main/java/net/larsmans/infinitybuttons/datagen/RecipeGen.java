@@ -8,8 +8,10 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
 import net.larsmans.infinitybuttons.compat.IBCarpenterBlocks;
+import net.larsmans.infinitybuttons.compat.IBCreateBlocks;
 import net.larsmans.infinitybuttons.compat.IBNethersDelightBlocks;
 import net.larsmans.infinitybuttons.compat.IBNethersDelightItems;
+import net.minecraft.block.Block;
 import net.minecraft.data.server.RecipeProvider;
 import net.minecraft.data.server.recipe.CraftingRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
@@ -19,6 +21,7 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.tag.ItemTags;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
 import java.util.function.Consumer;
 
@@ -138,6 +141,7 @@ public class RecipeGen extends FabricRecipeProvider {
         genSecretButton(i, InfinityButtonsBlocks.CRIMSON_PLANK_SECRET_BUTTON, Items.CRIMSON_PLANKS);
         genSecretButton(i, InfinityButtonsBlocks.WARPED_PLANK_SECRET_BUTTON, Items.WARPED_PLANKS);
         genSecretButton(i, InfinityButtonsBlocks.END_STONE_BRICK_SECRET_BUTTON, Items.END_STONE_BRICKS);
+        genSecretButton(i, InfinityButtonsBlocks.PURPUR_BLOCK_SECRET_BUTTON, Items.PURPUR_BLOCK);
         genSecretButton(i, InfinityButtonsBlocks.QUARTZ_BRICK_SECRET_BUTTON, Items.QUARTZ_BRICKS);
         genSecretButton(i, InfinityButtonsBlocks.DARK_PRISMARINE_SECRET_BUTTON, Items.DARK_PRISMARINE);
         genSecretButton(i, InfinityButtonsBlocks.POLISHED_BLACKSTONE_BRICK_SECRET_BUTTON, Items.POLISHED_BLACKSTONE_BRICKS);
@@ -155,6 +159,37 @@ public class RecipeGen extends FabricRecipeProvider {
         genSecretButton(i, IBCarpenterBlocks.DARK_OAK_BOOKSHELF_SECRET_BUTTON, CarpenterBlocks.DARK_OAK_BOOKSHELF.get());
         genSecretButton(i, IBCarpenterBlocks.CRIMSON_BOOKSHELF_SECRET_BUTTON, CarpenterBlocks.CRIMSON_BOOKSHELF.get());
         genSecretButton(i, IBCarpenterBlocks.WARPED_BOOKSHELF_SECRET_BUTTON, CarpenterBlocks.WARPED_BOOKSHELF.get());
+
+        genSecretButton(i, IBCreateBlocks.ROSE_QUARTZ_TILE_SECRET_BUTTON, byNameCreate("rose_quartz_tiles"));
+        genSecretButton(i, IBCreateBlocks.SMALL_ROSE_QUARTZ_TILE_SECRET_BUTTON, byNameCreate("small_rose_quartz_tiles"));
+        genSecretButton(i, IBCreateBlocks.CUT_GRANITE_BRICK_SECRET_BUTTON, byNameCreate("cut_granite_bricks"));
+        genSecretButton(i, IBCreateBlocks.SMALL_GRANITE_BRICK_SECRET_BUTTON, byNameCreate("small_granite_bricks"));
+        genSecretButton(i, IBCreateBlocks.CUT_DIORITE_BRICK_SECRET_BUTTON, byNameCreate("cut_diorite_bricks"));
+        genSecretButton(i, IBCreateBlocks.SMALL_DIORITE_BRICK_SECRET_BUTTON, byNameCreate("small_diorite_bricks"));
+        genSecretButton(i, IBCreateBlocks.CUT_ANDESITE_BRICK_SECRET_BUTTON, byNameCreate("cut_andesite_bricks"));
+        genSecretButton(i, IBCreateBlocks.SMALL_ANDESITE_BRICK_SECRET_BUTTON, byNameCreate("small_andesite_bricks"));
+        genSecretButton(i, IBCreateBlocks.CUT_CALCITE_BRICK_SECRET_BUTTON, byNameCreate("cut_calcite_bricks"));
+        genSecretButton(i, IBCreateBlocks.SMALL_CALCITE_BRICK_SECRET_BUTTON, byNameCreate("small_calcite_bricks"));
+        genSecretButton(i, IBCreateBlocks.CUT_DRIPSTONE_BRICK_SECRET_BUTTON, byNameCreate("cut_dripstone_bricks"));
+        genSecretButton(i, IBCreateBlocks.SMALL_DRIPSTONE_BRICK_SECRET_BUTTON, byNameCreate("small_dripstone_bricks"));
+        genSecretButton(i, IBCreateBlocks.CUT_DEEPSLATE_BRICK_SECRET_BUTTON, byNameCreate("cut_deepslate_bricks"));
+        genSecretButton(i, IBCreateBlocks.SMALL_DEEPSLATE_BRICK_SECRET_BUTTON, byNameCreate("small_deepslate_bricks"));
+        genSecretButton(i, IBCreateBlocks.CUT_TUFF_BRICK_SECRET_BUTTON, byNameCreate("cut_tuff_bricks"));
+        genSecretButton(i, IBCreateBlocks.SMALL_TUFF_BRICK_SECRET_BUTTON, byNameCreate("small_tuff_bricks"));
+        genSecretButton(i, IBCreateBlocks.CUT_ASURINE_BRICK_SECRET_BUTTON, byNameCreate("cut_asurine_bricks"));
+        genSecretButton(i, IBCreateBlocks.SMALL_ASURINE_BRICK_SECRET_BUTTON, byNameCreate("small_asurine_bricks"));
+        genSecretButton(i, IBCreateBlocks.CUT_CRIMSITE_BRICK_SECRET_BUTTON, byNameCreate("cut_crimsite_bricks"));
+        genSecretButton(i, IBCreateBlocks.SMALL_CRIMSITE_BRICK_SECRET_BUTTON, byNameCreate("small_crimsite_bricks"));
+        genSecretButton(i, IBCreateBlocks.CUT_LIMESTONE_BRICK_SECRET_BUTTON, byNameCreate("cut_limestone_bricks"));
+        genSecretButton(i, IBCreateBlocks.SMALL_LIMESTONE_BRICK_SECRET_BUTTON, byNameCreate("small_limestone_bricks"));
+        genSecretButton(i, IBCreateBlocks.CUT_OCHRUM_BRICK_SECRET_BUTTON, byNameCreate("cut_ochrum_bricks"));
+        genSecretButton(i, IBCreateBlocks.SMALL_OCHRUM_BRICK_SECRET_BUTTON, byNameCreate("small_ochrum_bricks"));
+        genSecretButton(i, IBCreateBlocks.CUT_SCORIA_BRICK_SECRET_BUTTON, byNameCreate("cut_scoria_bricks"));
+        genSecretButton(i, IBCreateBlocks.SMALL_SCORIA_BRICK_SECRET_BUTTON, byNameCreate("small_scoria_bricks"));
+        genSecretButton(i, IBCreateBlocks.CUT_SCORCHIA_BRICK_SECRET_BUTTON, byNameCreate("cut_scorchia_bricks"));
+        genSecretButton(i, IBCreateBlocks.SMALL_SCORCHIA_BRICK_SECRET_BUTTON, byNameCreate("small_scorchia_bricks"));
+        genSecretButton(i, IBCreateBlocks.CUT_VERIDIUM_BRICK_SECRET_BUTTON, byNameCreate("cut_veridium_bricks"));
+        genSecretButton(i, IBCreateBlocks.SMALL_VERIDIUM_BRICK_SECRET_BUTTON, byNameCreate("small_veridium_bricks"));
 
         ShapelessRecipeJsonBuilder.create(InfinityButtonsBlocks.DOORBELL)
                 .input(InfinityButtonsBlocks.DARK_OAK_LARGE_BUTTON)
@@ -220,7 +255,6 @@ public class RecipeGen extends FabricRecipeProvider {
         genConsoleButton(i, InfinityButtonsBlocks.BIG_CONSOLE_BUTTON, InfinityButtonsBlocks.LARGE_CONSOLE_BUTTON);
         genConsoleLever(i, InfinityButtonsBlocks.BIG_CONSOLE_LEVER, InfinityButtonsBlocks.BIG_CONSOLE_BUTTON);
 
-
         ShapedRecipeJsonBuilder.create(InfinityButtonsBlocks.TORCH_BUTTON)
                 .pattern("C").input('C', ItemTags.COALS)
                 .pattern("#").input('#', Items.STONE_BUTTON)
@@ -283,6 +317,10 @@ public class RecipeGen extends FabricRecipeProvider {
         genStonecutter(i, InfinityButtonsBlocks.PRISMARINE_BRICK_BUTTON, Items.PRISMARINE_BRICKS);
         genStonecutter(i, InfinityButtonsBlocks.DARK_PRISMARINE_BUTTON, Items.DARK_PRISMARINE);
         genStonecutter(i, Items.POLISHED_BLACKSTONE_BUTTON, Items.POLISHED_BLACKSTONE);
+    }
+
+    private static Block byNameCreate(String block) {
+        return Registry.BLOCK.get(new Identifier("create", block));
     }
 
     protected void genBothButtons(Consumer<RecipeJsonProvider> i, ItemConvertible out, ItemConvertible in, ItemConvertible large) {
@@ -348,11 +386,11 @@ public class RecipeGen extends FabricRecipeProvider {
     }
 
     protected void genConsoleButton(Consumer<RecipeJsonProvider> i, ItemConvertible out, ItemConvertible in) {
-        ShapelessRecipeJsonBuilder.create(out).input(in).input(Items.IRON_INGOT).criterion("has_thing", RecipeProvider.conditionsFromItem(Items.IRON_INGOT)).offerTo(i);
+        ShapelessRecipeJsonBuilder.create(out).input(in).input(Items.IRON_INGOT).group("console_buttons").criterion("has_thing", RecipeProvider.conditionsFromItem(Items.IRON_INGOT)).offerTo(i);
     }
 
     protected void genConsoleLever(Consumer<RecipeJsonProvider> i, ItemConvertible out, ItemConvertible in) {
-        ShapelessRecipeJsonBuilder.create(out).input(in).input(Items.LEVER).criterion("has_thing", RecipeProvider.conditionsFromItem(Items.IRON_INGOT)).offerTo(i);
+        ShapelessRecipeJsonBuilder.create(out).input(in).input(Items.LEVER).group("console_buttons").criterion("has_thing", RecipeProvider.conditionsFromItem(Items.IRON_INGOT)).offerTo(i);
     }
 
     protected void genStonecutter(Consumer<RecipeJsonProvider> i, ItemConvertible out, ItemConvertible in) {
