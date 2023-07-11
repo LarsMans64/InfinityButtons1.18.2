@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "infinitybuttons:sticky_copper_large_button_waxing"
+      "infinitybuttons:waxed_copper_large_button"
     ]
   },
   "criteria": {
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "infinitybuttons:sticky_copper_large_button_waxing"
+        "recipe": "infinitybuttons:waxed_copper_large_button"
       }
     }
   },
