@@ -27,10 +27,12 @@ import java.util.Random;
 
 public class RedstoneTorchButton extends TorchBlock {
     public static final BooleanProperty LIT = Properties.LIT;
+    public final Block jadeBlock;
 
-    public RedstoneTorchButton(FabricBlockSettings settings) {
+    public RedstoneTorchButton(FabricBlockSettings settings, Block jadeBlock) {
         super(settings, DustParticleEffect.DEFAULT);
         this.setDefaultState(this.stateManager.getDefaultState().with(LIT, false));
+        this.jadeBlock = jadeBlock;
     }
 
     @Override

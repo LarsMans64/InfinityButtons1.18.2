@@ -68,6 +68,7 @@ dependencies {
 	modCompileOnlyApi("curse.maven:pollen-544350:3972066")
 	modCompileOnlyApi("curse.maven:carpenter-549446:3972070")
 	modCompileOnly("com.simibubi.create:create-fabric-1.18.2:0.5.1-b-build.1088+mc1.18.2")
+	modImplementation "curse.maven:jade-324717:4573438"
 
 	// Only for data gen
 	modImplementation("curse.maven:farmers-delight-fabric-482834:4111479")
