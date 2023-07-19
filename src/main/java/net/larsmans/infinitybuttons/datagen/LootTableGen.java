@@ -229,6 +229,8 @@ public class LootTableGen extends SimpleFabricLootTableProvider {
         generateLootTable(i, InfinityButtonsBlocks.DOORBELL_BUTTON);
         generateLootTable(i, InfinityButtonsBlocks.LAMP_BUTTON);
         generateLootTable(i, InfinityButtonsBlocks.LAMP_LEVER);
+        generateLootTable(i, InfinityButtonsBlocks.LETTER_BUTTON);
+        generateLootTable(i, InfinityButtonsBlocks.LETTER_LEVER);
         generateLootTable(i, InfinityButtonsBlocks.LANTERN_BUTTON);
         generateLootTable(i, InfinityButtonsBlocks.LANTERN_LEVER);
         generateLootTable(i, InfinityButtonsBlocks.SOUL_LANTERN_BUTTON);
