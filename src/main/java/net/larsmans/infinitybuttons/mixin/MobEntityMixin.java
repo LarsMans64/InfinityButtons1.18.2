@@ -14,8 +14,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.util.Random;
-
 import static net.larsmans.infinitybuttons.InfinityButtonsUtil.SAFETY_BUTTONS;
 
 @Mixin(MobEntity.class)
@@ -29,7 +27,7 @@ public abstract class MobEntityMixin extends LivingEntity {
     @Shadow public abstract void setEquipmentDropChance(EquipmentSlot slot, float chance);
 
     @Inject(method = "initEquipment", at = @At("HEAD"), cancellable = true)
-    private void initEquipment(Random random, LocalDifficulty localDifficulty, CallbackInfo ci) {
+    private void initEquipment(LocalDifficulty difficulty, CallbackInfo ci) {
         InfinityButtonsUtil.buildSafety();
         if (random.nextDouble() < 0.001) {
             this.equipStack(EquipmentSlot.HEAD, new ItemStack(SAFETY_BUTTONS.get(random.nextInt(SAFETY_BUTTONS.size()))));
