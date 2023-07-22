@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.server.world.ServerWorld;
@@ -136,6 +137,11 @@ public abstract class AbstractHorizontalButton extends HorizontalFacingBlock {
             this.playClickSound(null, world, pos, false);
             world.emitGameEvent(null, GameEvent.BLOCK_UNPRESS, pos);
         }
+    }
+
+    @Override
+    public PistonBehavior getPistonBehavior(BlockState state) {
+        return PistonBehavior.DESTROY;
     }
 
     public void updateNeighbors(BlockState state, World world, BlockPos pos) {
