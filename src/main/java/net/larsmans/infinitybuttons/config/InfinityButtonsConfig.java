@@ -7,13 +7,16 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "infinitybuttons")
 @Config.Gui.Background("infinitybuttons:textures/block/copper_button.png")
 public class InfinityButtonsConfig implements ConfigData {
-    @ConfigEntry.Gui.Tooltip(count = 3)
+
+    public boolean muteAlarmSound = false;
+
+    @ConfigEntry.Gui.Tooltip(count = 6)
     @ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
     public AlarmEnum alarmSoundType = AlarmEnum.RANGE;
 
     @ConfigEntry.Gui.Tooltip
-    @ConfigEntry.BoundedDiscrete(min = 16, max = 512)
-    public int alarmSoundRange = 64;
+    @ConfigEntry.BoundedDiscrete(min = 1, max = 32)
+    public int alarmSoundRange = 6;
 
     @ConfigEntry.Gui.Tooltip
     public boolean alarmVillagerPanic = true;
