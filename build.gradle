@@ -1,6 +1,8 @@
 plugins {
 	id 'fabric-loom' version '1.0-SNAPSHOT'
 	id 'maven-publish'
+	id "com.modrinth.minotaur" version "2.+"
+	id 'com.matthewprenger.cursegradle' version '1.4.0'
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -82,6 +84,46 @@ dependencies {
 //	modApi "net.minecraftforge:forgeconfigapiport-fabric:3.2.4"
 
 	include(implementation(annotationProcessor("com.github.LlamaLad7:MixinExtras:0.1.1")))
+}
+
+modrinth {
+	token = System.getenv("MODRINTH_TOKEN")
+	projectId = "infinitybuttons"
+	versionNumber = "${rootProject.mod_version}"
+	versionName = "Infinity Buttons ${rootProject.mod_version} Fabric 1.18.2"
+	versionType = "release"
+	uploadFile = remapJar
+	gameVersions = ["1.18.2"]
+	loaders = ["fabric"]
+	dependencies {
+		required.project "cloth-config"
+	}
+	changelog = rootProject.file("CHANGELOG_LATEST.md").text
+
+	syncBodyFrom = rootProject.file("README.md").text
+	tasks.modrinth.dependsOn(tasks.modrinthSyncBody)
+}
+
+curseforge {
+	project {
+		apiKey = System.getenv("CURSEFORGE_TOKEN")
+		id = "661902"
+		changelog = rootProject.file("CHANGELOG_LATEST.md").text
+		changelogType = "markdown"
+		releaseType = "release"
+		addGameVersion "1.18.2"
+		addGameVersion "Fabric"
+
+		relations {
+			requiredDependency "cloth-config"
+		}
+		mainArtifact(remapJar) {
+			displayName = "Infinity Buttons ${rootProject.mod_version} Fabric 1.18.2"
+		}
+		options {
+			javaVersionAutoDetect = false
+		}
+	}
 }
 
 processResources {
