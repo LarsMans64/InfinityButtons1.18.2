@@ -278,7 +278,7 @@
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[0]": "De manier waarop noodknoppen alarmen kunnen maken",
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[1]": "RANGE: Alarmen zijn hoorbaar tot een bepaalde radius",
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[2]": "GLOBAL: Alarmen zijn overal in de wereld hoorbaar",
-  "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[3]": "",
+  "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[3]": " ",
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[4]": "§cDit client-side veranderen heeft geen effect op een server,",
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[5]": "§chet moet in de config van de server veranderd worden",
   "text.autoconfig.infinitybuttons.option.alarmSoundRange": "Alarmbereik",

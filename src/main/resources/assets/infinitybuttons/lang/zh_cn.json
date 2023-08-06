@@ -278,7 +278,7 @@
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[0]": "The way in which Emergency Buttons produce an alarm",
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[1]": "RANGE: Alarms are audible up to a certain radius",
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[2]": "GLOBAL: Alarms are audible from anywhere in the world",
-  "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[3]": "",
+  "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[3]": " ",
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[4]": "§cChanging this client-side has no effect on a server,",
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[5]": "§cit has to be changed in the server's config",
   "text.autoconfig.infinitybuttons.option.alarmSoundRange": "Alarm Range",
