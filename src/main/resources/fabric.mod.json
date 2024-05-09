@@ -34,9 +34,7 @@
             "net.larsmans.infinitybuttons.datagen.DataGenerator"
         ],
         "jade": [
-            "net.larsmans.infinitybuttons.compat.jade.InfinityButtonsPlugin",
-            "snownee.jade.addon.vanilla.VanillaPlugin",
-            "snownee.jade.addon.universal.UniversalPlugin"
+            "net.larsmans.infinitybuttons.compat.jade.InfinityButtonsPlugin"
         ]
     },
     "mixins": [
